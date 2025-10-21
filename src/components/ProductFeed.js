@@ -22,6 +22,7 @@ function ProductFeed({ products }) {
                 src="/long-banner.jpg"
                 alt=""
             />
+
             <div className="md:col-span-2">
                 {products
                     .slice(4, 5)
@@ -37,6 +38,7 @@ function ProductFeed({ products }) {
                         />
                     ))}
             </div>
+
             {products
                 .slice(5, products.length)
                 .map(({ id, title, price, description, category, image }) => (
