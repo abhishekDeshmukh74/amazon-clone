@@ -39,9 +39,10 @@ function Checkout() {
                         src="/prime-day-banner.avif"
                         width={1020}
                         height={250}
+                        alt="Prime day banner"
                         style={{ objectFit: "contain" }}
                     />
-
+ 
                     <div className="flex flex-col p-5 space-y-10 bg-white">
                         <h1 className="text-3xl border-b pb-4">
                             {items.length === 0
