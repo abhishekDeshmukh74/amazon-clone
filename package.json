@@ -1,6 +1,7 @@
 {
   "name": "amazon-clone",
   "version": "1.0.0",
+  "description": "A full-featured Amazon Clone built with Next.js, Redux Toolkit, Firebase, Stripe, and Tailwind CSS",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -29,5 +30,35 @@
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.15",
     "tailwindcss": "^2.1.2"
-  }
+  },
+  "homepage": "https://amazon-clone-beige-six.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhishekDeshmukh74/amazon-clone.git"
+  },
+  "author": "Abhishek abhishekdeshmukh74@gmail.com",
+  "license": "MIT",
+  "keywords": [
+    "amazon clone",
+    "nextjs",
+    "react",
+    "redux toolkit",
+    "firebase",
+    "stripe",
+    "tailwind css",
+    "ecommerce",
+    "full stack project",
+    "mern stack",
+    "next-auth",
+    "frontend developer",
+    "react project",
+    "javascript",
+    "typescript",
+    "responsive design",
+    "firebase authentication",
+    "stripe payments",
+    "nextjs ecommerce",
+    "nextjs project",
+    "full stack developer"
+  ]
 }
