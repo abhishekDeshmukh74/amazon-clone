@@ -19,7 +19,7 @@ function ProductFeed({ products }) {
 
             <img
                 className="md:col-span-full"
-                src="https://links.papareact.com/dyz"
+                src="/long-banner.jpg"
                 alt=""
             />
             <div className="md:col-span-2">

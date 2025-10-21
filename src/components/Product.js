@@ -55,9 +55,11 @@ function Product({ id, title, price, description, category, image }) {
             {hasPrime && (
                 <div className="flex items-center space-x-2 mt-5">
                     <img
-                        className="text-xs text-gray-500"
-                        src="https://links.papareact.com/fdw"
-                        alt=""
+                        className="text-xs text-gray-500 mr-4"
+                        src="prime.png"
+                        alt="Prime Logo"
+                        width={30}
+                        height={10}
                     />
                     <p>FREE Next-day Delivery</p>
                 </div>
