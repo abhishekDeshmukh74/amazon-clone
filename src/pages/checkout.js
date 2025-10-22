@@ -17,10 +17,8 @@ function Checkout() {
     const createCheckoutSession = async () => {
         const stripe = await stripePromise;
 
-        //Calling backend to create checkout session
-
         const checkoutSession = await axios.post("/api/create-checkout-session", {
-            items: items,
+            items,
             email: session.user.email,
         });
 
@@ -42,7 +40,7 @@ function Checkout() {
                         alt="Prime day banner"
                         style={{ objectFit: "contain" }}
                     />
- 
+
                     <div className="flex flex-col p-5 space-y-10 bg-white">
                         <h1 className="text-3xl border-b pb-4">
                             {items.length === 0
