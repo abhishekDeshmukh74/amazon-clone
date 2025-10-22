@@ -4,6 +4,6 @@ module.exports = {
         domains: ["fakestoreapi.com", "drive.google.com"],
     },
     env: {
-        stripe_public_key: process.env.STRIPE_PUBLIC_KEY,
+        STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY,
     },
 };

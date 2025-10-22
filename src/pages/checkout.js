@@ -1,13 +1,14 @@
-import Header from "../components/Header";
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import { selectItems, selectTotal } from "../slices/basketSlice";
-import CheckoutProduct from "../components/CheckoutProduct";
 import Currency from "react-currency-formatter";
 import { useSession } from "next-auth/react";
 import { loadStripe } from "@stripe/stripe-js";
-const stripePromise = loadStripe(process.env.stripe_public_key);
 import axios from "axios";
+const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
+
+import Header from "../components/Header";
+import { selectItems, selectTotal } from "../slices/basketSlice";
+import CheckoutProduct from "../components/CheckoutProduct";
 
 function Checkout() {
     const items = useSelector(selectItems);
