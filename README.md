@@ -103,7 +103,7 @@ GOOGLE_CLIENT_SECRET=
 # Stripe
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
 STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET= # Optional (for local webhooks)
+STRIPE_WEBHOOK_SECRET=
 ```
 
 > 💡 **Tip:** Even though Firebase client keys are technically public, always load them from `.env.local` to keep your repo clean and environment-specific.
@@ -146,7 +146,17 @@ Then visit ➡️ `http://localhost:3000`
 - Secure server-side checkout session handled via Next.js API routes.
 - After successful payment, redirects to a success page.
 
-> 💡 Use `stripe listen --forward-to localhost:3000/api/stripe/webhook` during local dev to test events.
+### 🔹 Getting STRIPE_SIGNING_SECRET (for Webhooks)
+To test webhooks locally and get your **STRIPE_SIGNING_SECRET**, run:
+```bash
+stripe listen --forward-to localhost:3000/api/webhook
+```
+After running, Stripe CLI will display a **Signing Secret** — copy that into your `.env.local` file under:
+```bash
+STRIPE_SIGNING_SECRET=whsec_...
+```
+
+> 💡 Use `stripe listen --forward-to localhost:3000/api/webhook` during local dev to automatically forward webhook events to your Next.js app.
 
 ---
 
