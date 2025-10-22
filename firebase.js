@@ -1,9 +1,19 @@
+import firebase from "firebase";
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAYk69OxzWekJ8FZWc0VwkjfiDsVp_MK-Y",
-    authDomain: "clone-da2da.firebaseapp.com",
-    projectId: "clone-da2da",
-    storageBucket: "clone-da2da.firebasestorage.app",
-    messagingSenderId: "475508589525",
-    appId: "1:475508589525:web:429180c904ba7b6ffd735c",
-    measurementId: "G-QGFCKZD4GB"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
+
+const app = !firebase.apps.length
+    ? firebase.initializeApp(firebaseConfig)
+    : firebase.app();
+
+const db = app.firestore();
+
+export default db;
