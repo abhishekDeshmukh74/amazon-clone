@@ -53,8 +53,6 @@ It provides a seamless shopping experience with authentication, cart management,
 |------------|-----------|---------|
 | ![Home](./screenshots/home.png) | ![Checkout](./screenshots/checkout.png) | ![Orders](./screenshots/orders.png) |
 
-> 📸 *Place screenshots inside a `/screenshots` folder in your repo to display them here.*
-
 ---
 
 ## 📁 Project Structure
